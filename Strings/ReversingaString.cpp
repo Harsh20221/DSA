@@ -6,8 +6,8 @@ using namespace std;
 int main(){ 
     int i=0; 
     int j=0;
+    int n=6; //? This is the length of the array
     char A[]={"Hello"};            
-    int n=strlen(A);
     char B[n];
     for (j=0, i=strlen(A)-1; i>=0; i--, j++){    //? i=strlen(A)-1 is the last element of the array
         B[j]=A[i];                               //? i>=0 is the first element of the array
