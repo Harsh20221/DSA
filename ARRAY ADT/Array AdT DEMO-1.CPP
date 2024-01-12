@@ -16,7 +16,7 @@ void displayoutput(struct Array arr) {  // Display function to display the eleme
   }
 }
 
-int main()     //// Main function should be necessarily present in programme else it will not run 
+int main()     //! Main function should be necessarily present in programme else it will not run 
 {
   struct Array arr;
   int n, i;
@@ -32,7 +32,7 @@ int main()     //// Main function should be necessarily present in programme els
     cin >> arr.A[i];
   }
   arr.length = n;
-  displayoutput(arr);  /// array argument is passed inside displayoutput  function 
+  displayoutput(arr);  //! array argument is passed inside displayoutput  function 
 }
 
 

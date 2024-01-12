@@ -16,9 +16,9 @@ int main() {
     // Use std::cout instead of cout  
 }
 // Function declaration
-///////int pain() {
-    /////struct rectangle r;
-   ////// r.length=90;
+//int pain() {
+    //struct rectangle r;
+   // r.length=90;
     ///r.breadth=5;
     //printf("Area of rectangle is %d",r.length*r.breadth);
     //std::cout<<r.length*r.breadth; // Use std::cout instead of cout

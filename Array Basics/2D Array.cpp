@@ -1,7 +1,7 @@
 #include <iostream>        
 #include <stdio.h>
 using namespace std;
- int main() { //// 0 ROw  // 1 row // 2 row 
+ int main() { // 0 ROw  // 1 row // 2 row 
     int A[3][3]={{1,3,4},{2,4,6},{3,4,5}};
     cout<<A[1][2]<<endl;  /// Output is 6 because we have specified  [1] and [2]  which means second row as it starts from 0 and and third column as it also  starts from 0
     
