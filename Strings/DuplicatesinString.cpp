@@ -5,7 +5,7 @@ using namespace std;
 
 int main(){ 
     char str[]="Dualipa";  //? This is how you declare an array of characters in C++
-    int h[26]={}; //? This is how you declate a hash table in C++
+    int h[26]={}; //? This is how you declare a hash table in C++
 for(int i=0 ; str[i]!='\0';i++){
     h[str[i]-97]+=1; //* HERE WHAT WE ARE DOING IS WE ARE SUBTRACTING 97 FROM THE ASCII VALUE //   h[str[i]-97]+=1; This line is incrementing the value of the index of the hash table by 1 . This is how the program keeps count of the occurances of each character in the string
 }
