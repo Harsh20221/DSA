@@ -17,8 +17,8 @@ if(i==j){ //! FOR ANY OPERATION IN A MATRIX , This Comdition is must to be check
 else 
 return 0;}
 int matrixdisplay(struct Matrix m ){
-    int i , j;
-    for ( i=0 ; i<m.n ; i++){
+    int i , j;   
+    for ( i=0 ; i<m.n ; i++){   ///!In Matrix Display Function the for loop for j will be inside for loop of i and then we'll check for conditions 
         for ( j=0 ; j<m.n ;j++ ){
             if (i==j){
                 cout<<m.A[i]<<" ";
