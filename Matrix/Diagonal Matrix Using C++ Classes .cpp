@@ -5,7 +5,7 @@ using namespace std;
 class Diagonal
 {
     private:
-    int *A;
+    int *A; ///! Define the array as pointer here
     int n;
 
     public:   //! Do not forget to put public here and also do not enclose Public in curly braces
