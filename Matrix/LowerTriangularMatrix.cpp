@@ -31,7 +31,7 @@ void lowerTriangularMatrix::set(int i , int j , int x ){
 #include <iostream>
 
 int lowerTriangularMatrix::get(int i , int j ){
-    if(i>=j){
+    if(i>=j){ //! FOR ANY OPERATION IN A MATRIX , This Comdition is must to be checked
       return  A[i*(i-1)/2 + j-1];
     }
     return 0;
@@ -40,7 +40,7 @@ int lowerTriangularMatrix::get(int i , int j ){
 void lowerTriangularMatrix::display(){
     for(int i=1 ; i<=n ; i++){ //! i & j will be initialised to 1 and i will be smaller than or equal to n just don't write it smaller than n
         for (int j=1 ; j<=n ; j++){  //! Here i will be smaller than or equal to n
-        if(i>=j)
+        if(i>=j) //? i will be greater than or equal to j as we are printing lower triangular matrix
             std::cout<< A[i*(i-1)/2 + j-1]<<" ";
         
     else 
