@@ -14,8 +14,8 @@ class Diagonal
             A=new int [2];
         }
      Diagonal(int n ){
-            this->n=n; //? we are initializing the size of array to n
-            A=new int [n];
+            this->n=n; //? we are initializing the size of array to n //? This is the formula to initialize the size of array in class and it'll be different for different types of matrix
+            A=new int [n];  
      }
         ~Diagonal(){ //? we are deleting the array A from   heap memory
             delete []A;  //! Do not forget to put [] here and  make sure to put delete in small letters  and also make sure to write it as delete []A not delete A[]
@@ -29,7 +29,7 @@ class Diagonal
         };
 void Diagonal::set(int i , int j , int x  ){  //! Very Very Important to define the function outside the class of same type as declared in class , do not define it as int  Diagonal::set(int i , int j , int x  ) , if you have defined  it as void set(int i , int j , int x  ) inside the class // Make sure to add the word Diagonal before the function name while defining it outside the class
     if (i==j){
-        A[i-1]=x; //! Make sure to write it as A[i-1] not A[i]
+        A[i-1]=x; //! Make sure to write it as A[i-1] not A[i]  , This is the formula to set the value of diagonal matrix and it'll be different for different types of matrix
     }
     }
 int Diagonal::get(int i , int j ){
