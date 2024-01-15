@@ -45,7 +45,7 @@ void Display(struct Sparse *S){
 
 int main(){
 
-    struct Sparse S;
+    struct Sparse S;  //? Declaring a structure variable
     create(&S);  //! Call by reference
     Display(&S);
     return 0;
