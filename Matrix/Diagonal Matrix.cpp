@@ -16,7 +16,7 @@ if(i==j){ //! FOR ANY OPERATION IN A MATRIX , This Comdition is must to be check
     return m->A[i-1];}
 else 
 return 0;}
-int matrixdisplay(struct Matrix m ){
+int matrixdisplay(struct Matrix m ){  //! In Display function we'll call the matrix by Value not by referance
     int i , j;   
     for ( i=0 ; i<m.n ; i++){   ///!In Matrix Display Function the for loop for j will be inside for loop of i and then we'll check for conditions 
         for ( j=0 ; j<m.n ;j++ ){

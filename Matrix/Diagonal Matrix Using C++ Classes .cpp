@@ -39,7 +39,7 @@ int Diagonal::get(int i , int j ){
     else
     return 0;
     }
-void  Diagonal::display(){
+void  Diagonal::display(){             
     for(int i=0 ; i<n ; i++){
         for ( int j=0 ; j<n ; j++){
             if (i==j){
