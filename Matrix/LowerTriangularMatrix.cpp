@@ -28,7 +28,7 @@ void lowerTriangularMatrix::set(int i , int j , int x ){
      A[i*(i-1)/2 + j-1]=x; 
     }
 }
-#include <iostream>
+
 
 int lowerTriangularMatrix::get(int i , int j ){
     if(i>=j){ //! FOR ANY OPERATION IN A MATRIX , This Comdition is must to be checked
