@@ -41,7 +41,7 @@ void lowerTriangularMatrix::display(){
     for(int i=1 ; i<=n ; i++){ //! i & j will be initialised to 1 and i will be smaller than or equal to n just don't write it smaller than n
         for (int j=1 ; j<=n ; j++){  //! Here i will be smaller than or equal to n
         if(i>=j) //? i will be greater than or equal to j as we are printing lower triangular matrix
-            std::cout<< A[i*(i-1)/2 + j-1]<<" ";
+            cout<< A[i*(i-1)/2 + j-1]<<" ";
         
     else 
     cout<<0<<""; //!!!! Make sure to put "" here to get the result in matrix form or else it will be in line form and make sure you don't give any space betqeen "" , please don't write it as " " there should be no space between ""
