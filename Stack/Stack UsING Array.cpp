@@ -26,6 +26,9 @@ else {
 }}
 
 void Display ( struct Stack S ){
+    if (S.top==-1 ){
+        cout<<"Stack Is Empty there is not any elememnt to print "<<endl;
+    }
 for(int i=S.top;i>=0;i--){
     cout<<S.s[i]<<endl;
 }}
