@@ -34,9 +34,9 @@ int main(){
 struct Stack S;
 cout<<"Enter the size of the Stack"<<endl;
 cin>>S.size;
-S.s=new int[S.size]; // Initialize the 's' pointer and allocate memory for it
-S.top=-1;
-push(&S,10);
+S.s=new int[S.size]; //? Initialize the 's' pointer and allocate memory for it
+S.top=-1; //! Make sure to initialise top to -1 here , Very Important 
+push(&S,10); //? Make sure to call push or pop by referance 
 push(&S,20);
 push(&S,30);
 push(&S,40);    
