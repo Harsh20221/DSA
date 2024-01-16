@@ -1,6 +1,6 @@
 #include <iostream>
 
-using namespace std;
+using namespace std; //!   This is an Ai generated example  code
 
 class ToeplitzMatrix {
 private:
