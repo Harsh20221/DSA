@@ -41,7 +41,7 @@ void Display() {
 
 int main() {
     int size;
-    cout << "Enter the size of the Stack" << endl;
+    cout << "Enter the size of the Stack:" << endl;
     cin >> size;
     top = -1;
     push(10); //? Make sure to call push or pop by reference
