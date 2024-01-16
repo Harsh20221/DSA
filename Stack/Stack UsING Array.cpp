@@ -3,7 +3,7 @@ using namespace std;
 struct Stack {
     int size;
     int top;
-    int *s;
+    int *s; //? Pointer to an array
 };
 
 void push ( struct Stack *S , int x ){
@@ -16,10 +16,13 @@ else {
 
 }
 void pop ( struct Stack *S ){
+    int x=-1;
 if(S->top ==-1 ){
       cout<<"The Stack is Empty"<<endl;}
-else {
+else { 
+    x=S->s[S->top];
     S->top--;
+    cout<<"The popped element is "<<x<<endl;
 }}
 
 void Display ( struct Stack S ){
