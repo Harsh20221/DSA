@@ -31,7 +31,7 @@ void Display(struct Sparse *S){
     int i=0, j=0, k=0; // !Initialize i and j to 0  like this only and not like int i,j=0; because it will only initialize j to 0 and not i
     for ( i ; i<S->m ; i++) { //! Make sure to define it as i smaller than S->m because m is the no of rows and n is the no of columns
         for ( j ; j<S->n; j++){  //! Make sure to define it as j smaller than S->n because m is the no of rows and n is the no of columns
-            if(i==S->e[k].i && j==S->e[k].j ){  //?In `i==S->e[k].i`, it's checking if the value of `i` is equal to the `i` value of the `k`th element in the `e` array of the `S` object. The `->` operator is used to access members of an object through a pointer. Here, `S` is presumably a pointer to an object that has a member `e`, which is an array. Each element of this array is an object that has a member `i`
+            if(i==S->e[k].i && j==S->e[k].j ){  //*In `i==S->e[k].i`, it's checking if the value of `i` is equal to the `i` value of the `k`th element in the `e` array of the `S` object. The `->` operator is used to access members of an object through a pointer. Here, `S` is presumably a pointer to an object that has a member `e`, which is an array. Each element of this array is an object that has a member `i`
                 //?Similarly, in `j==S->e[k].j`, it's checking if the value of `j` is equal to the `j` value of the `k`th element in the `e` array of the `S` object.
                 cout << S->e[k++].x << " ";  // ! Please Remember the syntax to print them or else you'll get errors 
             }
