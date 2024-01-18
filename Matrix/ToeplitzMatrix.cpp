@@ -47,11 +47,11 @@ void ToeplitzMatrix::display(){
                 cout<<A[n+j-i-1]<<" ";
             else 
                 cout<<"0 "<<"";
-        }
+        } 
         cout<<endl;
     }
 }
-
+  
 int main(){
     int n , x;
     cout<<"Please Enter the Size of the Matrix :"<<endl;

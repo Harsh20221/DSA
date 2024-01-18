@@ -6,7 +6,7 @@ class TriDiagonalMatrix {
         int n;
     public:
      TriDiagonalMatrix(){
-        n=2 ;
+        n=2 ;       
         A=new int(3*(n-2)) ;
      }
      TriDiagonalMatrix(int n){
