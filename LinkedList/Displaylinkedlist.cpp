@@ -1,12 +1,16 @@
-#include <Iostream>
-#include <stdlib.h>
+#include <Iostream>  
+#include <stdlib.h> 
 #include <stdio.h>
 using namespace std;
 struct Node {
     int data;
     struct Node *next;
-}*first=NULL;
-
+}*first=NULL;  //? This is how the create function of the Code is working 
+ //*The provided C++ code is a function named `create` that constructs a singly linked list from an array of integers. The function takes two parameters: an array of integers `A[]` and an integer `n` representing the size of the array
+//*The function begins by declaring an integer `i` which will be used as a counter in the loop that iterates through the array. It also declares two pointers `t` and `last` of type `Node`. `Node` is a struct that has two members: an integer `data` and a pointer `next` to another `Node`
+//*The function then allocates memory for the first node of the linked list on the heap using the `new` keyword. The `data` member of the first node is assigned the first element of the array `A[0]`, and the `next` pointer is set to `NULL`, indicating the end of the list. The `last` pointer is then set to point to the first node.
+//*The function then enters a loop that starts from the second element of the array (index 1) and ends at the last element (index `n-1`). In each iteration of the loop, it allocates memory for a new node `t`, assigns the `i`th element of the array to the `data` member of the new node, and sets the `next` pointer of the new node to `NULL`. The `next` pointer of the `last` node is then set to point to the new node, effectively adding the new node to the end of the list. Finally, the `last` pointer is updated to point to the new node.
+//*By the end of the loop, a singly linked list is created where each node contains an element from the array and points to the next node in the list. The last node in the list points to `NULL`, indicating the end of the list.
 
 void create(int A[], int n) { //! Define the function with int A[] , don't just write A[]
     int i; //? Declare a variable i
