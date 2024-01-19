@@ -5,7 +5,8 @@ using namespace std;
 struct Node {
     int data;
     struct Node *next;
-}*first=NULL;  //? This is how the create function of the Code is working 
+}*first=NULL; //? Declare a global pointer to a node and assign it to NULL  
+ //? This is how the create function of the Code is working 
  //*The provided C++ code is a function named `create` that constructs a singly linked list from an array of integers. The function takes two parameters: an array of integers `A[]` and an integer `n` representing the size of the array
 //*The function begins by declaring an integer `i` which will be used as a counter in the loop that iterates through the array. It also declares two pointers `t` and `last` of type `Node`. `Node` is a struct that has two members: an integer `data` and a pointer `next` to another `Node`
 
