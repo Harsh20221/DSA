@@ -38,10 +38,11 @@ cout<<p->data<<endl; //? That's how you print p's element by typing it as p-> da
 p=p->next;   //? Assign p to p->next
 }
  }
- void recdisplay(struct Node *p){
-    if (p!=NULL){
-        cout<<p->data<<endl;
-        recdisplay(p->next);
+ void recdisplay(struct Node *p){  //! Make sure to pass a struct Node to print function with a name
+    if (p!=NULL){ //! Make sure to give if condition to display function
+        cout<<p->data<<endl;  //! That's how you print p's element by typing it as p-> data
+        recdisplay(p->next); //! Do not write p=p->next in display function
+                             ///! write p->next only
     }
  }
   int main(){
