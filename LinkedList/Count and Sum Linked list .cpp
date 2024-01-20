@@ -46,13 +46,21 @@ while(p!=NULL){
 return sum;
 }
 
+int sumrec(struct node *p){
+ if(p=NULL)   //! There is no need to define a variable named sum here and incriment it again and again , just write the if condition and return 0 and in the else condition write the recursive function
+ return 0; 
+ else 
+  return sumrec(p->next)+(p->data);  //? This is how you'll define the recursive function that will going to be executed again and again till we have our sum
+    
+
+}
+
 int main (){
  int  A[]={2,3,4,5,6,7,8};
  create(A,7);
 count(first);  //! Make sure to call the count function by first as parameter 
 displayrecursive(first);
-cout<<"The sum is "<<sumiterative(first);  ///! Very important to enclose the sum statement inside cout or else it will not work 
- 
-
+///cout<<"The sum is "<<sumiterative(first);  ///! Very important to enclose the sum statement inside cout or else it will not work 
+cout<<"The sum is "<<sumrec(first);
 }
 
