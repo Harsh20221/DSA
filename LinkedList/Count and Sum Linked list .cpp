@@ -43,7 +43,7 @@ while(p!=NULL){
     sum+=p->data;  //! Make sure to add sum again to sum along with the data of struct p 
     p=p->next;   ///! Do not forget to move p towards next node 
 } 
-return sum;
+return sum; //! Very imp to return sum to get sum as result 
 }
 
 int sumrec(struct node *p){
@@ -61,7 +61,7 @@ int main (){
  create(A,7);
 count(first);  //! Make sure to call the count function by first as parameter 
 displayrecursive(first);
-///cout<<"The sum is "<<sumiterative(first);  ///! Very important to enclose the sum statement inside cout or else it will not work 
-cout<<"The sum is "<<sumrec(first);
+///cout<<"The sum is "<<sumiterative(first);  ///! Very important to print the sum statement with cout or else it will not work 
+cout<<"The sum is "<<sumrec(first); 
 }
 
