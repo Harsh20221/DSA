@@ -38,6 +38,12 @@ cout<<p->data<<endl; //? That's how you print p's element by typing it as p-> da
 p=p->next;   //? Assign p to p->next
 }
  }
+ void recdisplay(struct Node *p){
+    if (p!=NULL){
+        cout<<p->data<<endl;
+        recdisplay(p->next);
+    }
+ }
   int main(){
     int A[]={2,3,4,5,6};
     //struct Node n;
