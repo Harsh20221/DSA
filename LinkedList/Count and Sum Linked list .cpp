@@ -47,7 +47,8 @@ return sum;
 }
 
 int sumrec(struct node *p){
- if(p=NULL)   //! There is no need to define a variable named sum here and incriment it again and again , just write the if condition and return 0 and in the else condition write the recursive function
+ if(p==NULL) //! Make sure to write p==NULL in the if condition not p=Null 
+   //! There is no need to define a variable named sum here and incriment it again and again , just write the if condition and return 0 and in the else condition write the recursive function
  return 0; 
  else 
   return sumrec(p->next)+(p->data);  //? This is how you'll define the recursive function that will going to be executed again and again till we have our sum
