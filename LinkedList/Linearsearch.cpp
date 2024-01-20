@@ -42,6 +42,18 @@ void linearsearchiterative(struct node *p,int key){  //? This is one waay of doi
     
 }
 
+struct node * linearsearchrecursive(struct node *p,int key){  //? This is another way of doing linear search in a linked list , as teched by instructor
+if (p==NULL){
+    return NULL;
+}
+else if (key==p->data){
+    return p;
+  
+}
+return (linearsearchrecursive(p->next,key)); //! Make sure to enclose Recursive function inside return statement 
+
+}
+
 struct node * linearsearch2iterative(struct node *p,int key){  //? This is another way of doing linear search in a linked list , as teched by instructor 
 while (p!=NULL){
     if (key==p->data)
@@ -59,7 +71,9 @@ int main (){
     create(A,7);
     display(first);
     linearsearchiterative(first,3);
-    cout<<linearsearch2iterative(first,3); //! We need to use cout here because the function doesn't have cout but  return statement  only 
+    cout<<"The element is found at index\n "<<linearsearch2iterative(first,3); //! We need to use cout here because the function doesn't have cout but  return statement  only 
+    cout<<"The element is found at index:\n"<<linearsearchrecursive(first,3); //! We need to use cout here because the function doesn't have cout but  return statement  only
+
 
     return 0;
 }
