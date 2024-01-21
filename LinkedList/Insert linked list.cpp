@@ -83,13 +83,11 @@ last=t;  //? we are assigning the address of t to the last pointer because we wa
 }
 
 
-
-
-
 int main(){
 int A[]={2,3,4,5,6,7,8};
 create(A,6);
 insert(first,2,10);
+inserttolast(first,20);  //? Calling this will insert 20 at last and will make 20 as last element of the linked list
 display(first);
 
 }
