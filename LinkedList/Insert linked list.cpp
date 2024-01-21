@@ -32,6 +32,7 @@ if (index==0){
 }
 else{ 
 for ( int i=0 ; i<index-1;i++){  //! Make sure to end the for loop for condition as index-1
+//? W have this for loop as we are bringing  a new pointer  q to the index where we want to insert the node
     p=p->next;
     q->next=p->next;
 p->next=q;
