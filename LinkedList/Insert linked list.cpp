@@ -68,6 +68,23 @@ void create (int A[], int n){
 
 
 }
+void inserttolast(struct node *p , int x){
+  struct node *t ; struct node *last;
+t=new node ;  //? here t is same as r that we have used in other examples 
+t->data=x;
+t->next=NULL;
+if ( first==NULL){
+    last=first=t; //? here we are assigning the address of t to the last pointer because we want to make t as the last node of the linked list
+
+}
+else  
+last->next=t;   //?we are assigning the address of t to the next pointer of last node because we want to insert the node at the end of the linked list
+last=t;  //? we are assigning the address of t to the last pointer because we want to make t as the last node of the linked list
+}
+
+
+
+
 
 int main(){
 int A[]={2,3,4,5,6,7,8};
