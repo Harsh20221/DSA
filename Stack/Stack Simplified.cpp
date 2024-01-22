@@ -13,10 +13,11 @@ void push(int x) {
         cout << "The Stack is Full" << endl;
     }
     else {
+        for (int i =0 ; i < size; i++){
         top++;
         s[top] = x;
     }
-}
+}}
 
 void pop() {
     int x = -1;
@@ -41,13 +42,13 @@ void Display() {
 
 int main() {
     int size;
+    int x ;
     cout << "Enter the size of the Stack:" << endl;
     cin >> size;
     top = -1;
-    push(10); //? Make sure to call push or pop by reference
-    push(20);
-    push(30);
-    push(40);
+   cout<<"Please enter element you want to get pushed in the stack"<<endl;
+   cin>>x;
+    push(x);
     pop();
     Display();
 }
