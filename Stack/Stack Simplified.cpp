@@ -12,7 +12,7 @@ void push(int x) {
     if (top == size - 1) {
         cout << "The Stack is Full" << endl;
     }
-    else {
+    else {      
             top++;
             s[top] = x;
         }
@@ -42,7 +42,7 @@ void Display() {
 
 int main() {
     int size;
-    int x ;
+    int x ; 
     cout << "Enter the size of the Stack:" << endl;
     cin >> size;
     top = -1;
@@ -51,6 +51,8 @@ int main() {
         cin >> x;
         push(x);
     }
+cout<<"The stack is finally "<<endl;
+    Display();
     pop();
     Display();
 }
