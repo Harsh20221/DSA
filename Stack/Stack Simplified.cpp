@@ -8,16 +8,16 @@ int size = 100; // Initialize size with a value
 int top = -1;
 
 void push(int x) {
-    int size =100;
+    int size = 100;
     if (top == size - 1) {
         cout << "The Stack is Full" << endl;
     }
     else {
-        for (int i =0 ; i < size; i++){
-        top++;
-        s[top] = x;
+            top++;
+            s[top] = x;
+        }
     }
-}}
+
 
 void pop() {
     int x = -1;
@@ -46,9 +46,11 @@ int main() {
     cout << "Enter the size of the Stack:" << endl;
     cin >> size;
     top = -1;
-   cout<<"Please enter element you want to get pushed in the stack"<<endl;
-   cin>>x;
-    push(x);
+    for (int i = 0; i < size; i++) {
+        cout << "Enter the element to be pushed" << endl;
+        cin >> x;
+        push(x);
+    }
     pop();
     Display();
 }
