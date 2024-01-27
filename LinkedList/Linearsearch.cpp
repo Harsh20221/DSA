@@ -66,7 +66,7 @@ return NULL;  //? This is the return statement of the function if we don't find 
 
 }
 
-struct node *linearsearchoptimised(struct node *p,int key){ 
+struct node *linearsearchoptimised(struct node *p,int key){   //* We are using Move to from approach here to optimise the linear search
 struct node *q=NULL;
 while ( p!=NULL){
     if(key==p->data){
