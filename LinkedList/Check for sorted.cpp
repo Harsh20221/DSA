@@ -49,5 +49,5 @@ int main(){
     int A[]={2,3,4,5,6};
     create(A,5);
    //// display(first);
-   cout<<checkforsorted(first)<<endl; ///! in order to display return statement use cout 
+   cout<<checkforsorted(first)<<endl; ///! in order to display return statement usi
 }
