@@ -17,7 +17,7 @@ struct Node {
 //*By the end of the loop, a singly linked list is created where each node contains an element from the array and points to the next node in the list. The last node in the list points to `NULL`, indicating the end of the list.
 
 void create(int A[], int n) { //! Define the function with int A[] , don't just write A[]
-    int i; //? Declare a variable i
+    int i; //? Declare a variable i  // here n is the length of this list 
     struct Node *t, *last;  //? Declare a pointer to a node t and last
     first = new Node;    //? Allocate memory in heap for the first node
     first->data = A[0];  //?    Assign the first element of the array to the data of the first node
