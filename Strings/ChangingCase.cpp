@@ -2,7 +2,7 @@
 #include<stdlib.h>   ///! This Code converts lowercase to upercase and upercase to lower case letters in a string by increasing or decreasing it's ASCII VALUES Tthat are stored 
 //* PLEASE REFER TO ASCII TABLE FOR MORE DETAILS 
 #include<stdio.h>
-using namespace std;
+using namespace std;    
 int main(){
 char Name[]="DuAlIpA";
 for ( int i=0 ; Name[i]!='\0';i++) ///! Make sure to enclose i! '\0' inside single brackets , Also make sure to write Name [i]!='\0' not Just Name !='\0'

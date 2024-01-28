@@ -1,10 +1,10 @@
-#include <iostream >
+#include <iostream>  //! DO NOT WRITE  <iostream> here as < iostream > because it will not work
 #include <stdio.h>
 #include <stdlib.h>
 using namespace std;
 struct node {
     int data ;
-    struct node *next; 
+    struct node *next;  
 }*first;
 
 void create (int A[], int n ){
