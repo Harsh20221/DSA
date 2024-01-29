@@ -7,7 +7,7 @@ using namespace std;
     int i;
     p = new int[5];
     p[0] = 3;
-    p[1] = 5;   // this is how we can assign values to the array
+    p[1] = 5;   //! this is how we can assign values to the array
     p[2] = 7;
     p[3] = 9;
     p[4] = 11;
