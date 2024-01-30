@@ -50,13 +50,34 @@ while (p!=NULL){
 }
 }       
 
+
+void reverselinkedlistusing3pointer(struct node *p){  //* BY DEFAULT ANY POINTER IS INITIALISED TO NULL , HENCE HERE P IS ALSO INITIALISED TO NULL 
+  struct node *q=NULL;
+  struct node *r=NULL;
+while (p!=NULL){
+r=q;  ///?In the context of the `reverselinkedlistusing3pointer` function, `r=q;` and `q=p;` are used to move three pointers (`p`, `q`, and `r`) through the linked list.
+//?The line `r=q;` sets `r` to point to the same node that `q` is currently pointing to. This effectively moves `r` one step forward in the list.
+
+//?The line `q=p;` then sets `q` to point to the same node that `p` is currently pointing to. This moves `q` one step forward in the list as well.
+//?These two lines are part of a technique to reverse a linked list by iterating through it with three pointers. `p` is always the furthest ahead, pointing to the current node. `q` is one step behind `p`, pointing to the previous node, and `r` is one step behind `q`, pointing to the node before that.
+//?By moving these three pointers forward in this way, and in each step setting the `next` pointer of the current node (`q`) to the previous node (`r`), the function effectively reverses the links between the nodes, thus reversing the list.
+q=p;
+p=p->next;
+q->next=r;
+}
+first=q;
+}
+
+///* In the `reverselinkedlistusing3pointer` function, the while loop continues as long as `p` is not `NULL`. In each iteration of the loop, `p` is moved one step forward with `p=p->next;`. This means that when `p` reaches the last node of the list, it will not become `NULL` immediately. Instead, it will become `NULL` in the next iteration, after the `next` pointer of the last node has been reversed by `q`.
+
 int main(){
     int A[]={2,3,4,5,6};
     create(A,5);
     cout<<"The List before reverse is\n";
     display(first);
     cout<<endl;
-    reverselinkedlist(first);
+    ///reverselinkedlist(first);
+    reverselinkedlistusing3pointer(first);
     display(first);
     return 0;
 }
