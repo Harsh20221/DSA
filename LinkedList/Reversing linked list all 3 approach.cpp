@@ -75,8 +75,13 @@ first=q;
 
 
 
-int reversinglinkedlistusingrecursion(struct node *P){
+void reversinglinkedlistusingrecursion(struct node *q,struct node *p){
+if  (p!=NULL){
+  reversinglinkedlistusingrecursion(p,p->next); //? we'll first  traverse the list 
+   p->next=q; //?This line here will reverse the link by changing the next link of every node at return time 
+}
 
+else first=q ;
 }
 int main(){
     int A[]={2,3,4,5,6};
@@ -85,7 +90,8 @@ int main(){
     display(first);
     cout<<endl;
     ///reverselinkedlist(first);
-    reverselinkedlistusing3pointer(first);
+  ///  reverselinkedlistusing3pointer(first);
+  reversinglinkedlistusingrecursion(NULL,first);
     display(first);
     return 0;
 }
