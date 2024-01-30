@@ -68,7 +68,10 @@ q->next=r;
 first=q;
 }
 
-///* In the `reverselinkedlistusing3pointer` function, the while loop continues as long as `p` is not `NULL`. In each iteration of the loop, `p` is moved one step forward with `p=p->next;`. This means that when `p` reaches the last node of the list, it will not become `NULL` immediately. Instead, it will become `NULL` in the next iteration, after the `next` pointer of the last node has been reversed by `q`.
+///* In the `reverselinkedlistusing3pointer` function, the while loop continues as long as `p` is not `NULL`. In each iteration of the loop, `p` is moved one step forward with `p=p->next;`. This means that when `p` reaches the last node of the list, it will not become `NULL` immediately. Instead, it will become `NULL` in the next iteration, after the `next` pointer of the last node has been reversed by `q`.  
+//?So, when `p` is pointing to the last node, `q` is pointing to the second last node. In this iteration, `q->next=r;` reverses the `next` pointer of the second last node to point to the third last node, and `p=p->next;` moves `p` to `NULL`
+//?In the next iteration, `p` is `NULL`, so the loop ends. But before the loop ends, `q->next=r;` in the previous iteration has already reversed the `next` pointer of the last node to point to the second last node. Therefore, the last node is not left out.
+//?After the loop, `first=q;` updates the `first` pointer to point to the last node of the original list, which is now the first node of the reversed list. This completes the reversal of the list.
 
 int main(){
     int A[]={2,3,4,5,6};
