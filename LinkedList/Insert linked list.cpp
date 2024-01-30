@@ -1,4 +1,4 @@
-#include <iostream>   //? This is the code for inserting a node at a given index in a linked list and it congtains all insert functions  both at the beginning and at the end
+#include <iostream>   //? this is the code for inserting a node at a given index in a linked list and it congtains all insert functions  both at the beginning and at the end
 #include <stdio.h>
 #include<stdlib.h>
 using namespace std;
@@ -19,24 +19,24 @@ return c;
 
 
 void insert(struct node *p , int index, int x ){
-struct node *q;
+struct node *t;
 if(index<0||index>count(p)){   //! We need count function here to get the length of linked list nodes 
     return ;
 }
-q=new node ;
-q->data=x; //! Remember to push value of x in q's data 
+t=new node ;
+t->data=x; //! Remember to push value of x in t's data 
 if (index==0){
-    q->next=first;
- first=q;
+    t->next=first;
+ first=t;
 
 }
 else{ 
 for ( int i=0 ; i<index-1;i++){  //! Make sure to end the for loop for condition as index-1
-//? W have this for loop as we are bringing  a new pointer  q to the index where we want to insert the node
+//? We have this for loop as we are bringing  a new pointer  t to the index where we want to insert the node
+//!Even if you have a condition for the 0 index elsewhere in your code, this loop still needs to start from 0. this is because it's not skipping the first node, but rather it's iterating over all nodes up to the node before `index`.
     p=p->next;
-    q->next=p->next;
-p->next=q;
-
+    t->next=p->next; //?Here t is the new node that is going to be inserted to the linked list 
+p->next=t; //* p is traversing through the list and helping to insert the elements in the linked list , p is at the place where new node will be inserted after , the new node t will be inserted after p  that's why we are doing t->next=p->next and then we are pointing p to the new node t 
 }
 
 }}
@@ -68,7 +68,7 @@ void create (int A[], int n){
 
 
 }
-void inserttolast(struct node *p , int x){
+void insertolast(struct node *p , int x){
   struct node *t ; struct node *last;
 t=new node ;  //? here t is same as r that we have used in other examples 
 t->data=x;
@@ -87,7 +87,7 @@ int main(){
 int A[]={2,3,4,5,6,7,8};
 create(A,6);
 insert(first,2,10);
-inserttolast(first,20);  //? Calling this will insert 20 at last and will make 20 as last element of the linked list
+insertolast(first,20);  //? Calling this will insert 20 at last and will make 20 as last element of the linked list
 display(first);
 
 }
