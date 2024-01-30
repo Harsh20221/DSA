@@ -63,7 +63,7 @@ r=q;  ///?In the context of the `reverselinkedlistusing3pointer` function, `r=q;
 //?By moving these three pointers forward in this way, and in each step setting the `next` pointer of the current node (`q`) to the previous node (`r`), the function effectively reverses the links between the nodes, thus reversing the list.
 q=p;
 p=p->next;
-q->next=r;
+q->next=r;  //! NOTE -- IN THIS APPROACH WE ARE MOVING THE POINTERS NOT THE ELEMENTS , DON'T CONFUSE YOURSELF , THE LINKS ARE GETTING REVERSED NOT THE ELEMENTS 
 }
 first=q;
 }
@@ -73,6 +73,11 @@ first=q;
 //?In the next iteration, `p` is `NULL`, so the loop ends. But before the loop ends, `q->next=r;` in the previous iteration has already reversed the `next` pointer of the last node to point to the second last node. Therefore, the last node is not left out.
 //?After the loop, `first=q;` updates the `first` pointer to point to the last node of the original list, which is now the first node of the reversed list. This completes the reversal of the list.
 
+
+
+int reversinglinkedlistusingrecursion(struct node *P){
+
+}
 int main(){
     int A[]={2,3,4,5,6};
     create(A,5);
