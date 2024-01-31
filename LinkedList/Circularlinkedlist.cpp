@@ -16,7 +16,7 @@ void insert ( struct node *p , int pos , int x){  //! Make sure to pass  node p 
         t->data=x;
         if ( head==NULL){  ///? This is the case when the linked list is empty
             head=t;
-            head->next=head;
+            head->next=head;  //? This will make the head node point to itself , hence making it circular
         }
         else  {
             while(p->next!=head) //! Make sure to write p->next!=head not p!=head
