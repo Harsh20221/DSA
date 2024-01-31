@@ -28,7 +28,7 @@ void insert ( struct node *p , int pos , int x){  //! Make sure to pass  node p 
         }
     }
     else {
-        for ( int i=0 ; i<pos-1; i++){
+        for ( int i=0 ; i<pos-1; i++){  //* Here we are taking pointer p to the place where we have to insert the new node t , i.e -- start of the linked list after traversing the whole linked list hence it will start from 0 and not 1 
             p=p->next;}  //! VERY IMPORTANT NOT TO enclose creation and linking of new node inside the for loop , otherwise it will create and link the new node everytime the loop runs
             t=new node ;
             t->data =x; 
