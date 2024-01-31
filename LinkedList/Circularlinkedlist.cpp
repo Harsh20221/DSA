@@ -19,12 +19,12 @@ void insert ( struct node *p , int pos , int x){  //! Make sure to pass  node p 
             head->next=head;  //? This will make the head node point to itself , hence making it circular
         }
         else  {
-            while(p->next!=head) //! Make sure to write p->next!=head not p!=head
+            while(p->next!=head){ //! Make sure to write p->next!=head not p!=head
             //? This is the case when the linked list is not empty 
-                p=p->next;      //? Here we are moving the pointer node p to the place where we have to insert the new node t , i.e -- start of the linked list after traversing the whole linked list  
+                p=p->next; }     //*Here we are moving the pointer node p to the place where we have to insert the new node t , i.e -- start of the linked list after traversing the whole linked list  
             p->next=t;
-            t->next=head;
-            head=t;
+            t->next=head; //? this is pointing the new node t to the head node , hence making it circular
+            head=t; //? This is making the new node t as the head node
         }
     }
     else {
