@@ -41,6 +41,8 @@ p->next=t; //* p is traversing through the list and helping to insert the elemen
 
 }}
 
+///?   If the loop condition is `i < index-1` and `index` is 3, the loop will stop when `i` is equal to `index-1`In a for loop, the increment (usually `i++` or similar) happens after the loop body is executed and before the condition is checked again. So, if `i` becomes equal to `index-1` after the increment, the condition `i < index-1` will be false, and the loop will stop.So, when the loop stops, the value of `i` will be equal to `index-1`. In your example, where `index` is 3, the loop will stop when `i` is 2. This is because the loop continues to execute as long as `i` is less than `index-1`, and stops as soon as `i` is not less than `index-1`, which is when `i` equals `index-1`.
+
 
 void display(struct node *p){
 while (p!=NULL){

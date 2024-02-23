@@ -39,6 +39,9 @@ for(int i=m.front+1 ; i<=m.rear;i++){
 
 int main() { 
     struct Queue m;
+    int size;
+    printf("Please Enter the size of the queue");
+scanf("%d",&size);
     create(&m,5);
     enqueue(&m,10);
     enqueue(&m,20);
@@ -48,5 +51,8 @@ int main() {
     cout<<endl;
     display(m);
     return 0;
-}
+
   
+
+}
+
