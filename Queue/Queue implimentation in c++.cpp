@@ -26,12 +26,13 @@ void dequeue(struct Queue *m){
     cout<<"queue is empty "<<endl;
   }
   else m->front++;
-   x=m->q[m->front];
+   x=m->q[m->front];  
+
   
 }
 
 
-void  display(struct Queue m){
+void  display(struct Queue m){  ///?In this particular implementation of a queue in C++, the `front` and `rear` pointers are initialized to `-1` when the queue is empty. When an element is enqueued, the `rear` pointer is incremented and the element is inserted at the `rear` position. However, the `front` pointer remains at `-1` until an element is dequeued.
 for(int i=m.front+1 ; i<=m.rear;i++){
   cout<<m.q[i];
 }  
