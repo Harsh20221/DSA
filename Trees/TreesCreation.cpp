@@ -2,10 +2,16 @@
 #include <stdlib.h>
 #include <stdio.h>
 using namespace std;
+ struct node {  //* For eease of Understandig we can say that This node is like a doubly linked list with previous and next node 
+   struct node *leftchild;   
+   int data;  
+   struct node *rightchild;
+
+ };
  struct queue  {
     int front;
     int rear;
-    int *Q;
+    node **Q;  //! Make Sure to Change the type of the array where we store the queue to the new type node  , Use double pointer ** here
     int size;
  };
 
@@ -35,11 +41,11 @@ else {
    q->front=-1; 
    q->rear=-1;
    /////q->Q=new int [size];
-q->Q=(int*)malloc(sizeof(size));
+q->Q=(node**)malloc(q->size*sizeof(node*)); //! Make sure to change the data  type of heap memory to node type 
    
  }
 
-void enqueue(struct queue *q, int x) {
+void enqueue(struct queue *q, node *x) { //! Make sure to also change the enqueue data type to *node 
    if (isfull(q)) {
       printf("Queue is Full Cannot Insert ");
    } else {
@@ -48,16 +54,15 @@ void enqueue(struct queue *q, int x) {
    }
 }
 
-void dequeue( struct queue *q ){
-   int x;
+node* dequeue( struct queue *q ){ //! Make sure to change the fuction type to node *
+   node* x=NULL; //! Make sure to change the type of x to node *
    if (isempty(q)){
       printf("Queue is Empty No element to Dequeue");
    }
    else  
    q->front++;
- x=q->Q[q->front];
-printf("The Deleted Element is:",x);
-printf("\n");
+ x=q->Q[q->front]; 
+return x;
 }
 
 
@@ -65,17 +70,4 @@ void display(struct queue *q){
    for (int i=q->front+1;i<=q->rear;i++){
       printf("%d",q->Q[i]);
    }
-}
-
-int main(){
-   struct queue q;
-   create(&q,5);
-   enqueue(&q,10);
-   enqueue(&q,20);
-   enqueue(&q,30);
-   enqueue(&q,40);
-   enqueue(&q,50);
-   dequeue(&q);
-   display(&q);
-   return 0;
 }
