@@ -66,8 +66,9 @@ return x;
 }
 
 
-void display(struct queue *q){
-   for (int i=q->front+1;i<=q->rear;i++){
+void display(struct queue *q){    
+   for (int i=q->front+1;i<=q->rear;i++){  //?In this particular implementation of a queue in C++, the `front` and `rear` pointers are initialized to `-1` when the queue is empty. When an element is enqueued, the `rear` pointer is incremented and the element is inserted at the `rear` position. However, the `front` pointer remains at `-1` until an element is dequeued.
+
       printf("%d",q->Q[i]);
    }
 }
