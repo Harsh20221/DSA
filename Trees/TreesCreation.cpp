@@ -35,7 +35,7 @@ else {
 }
  }
 
- void create(struct queue *q,int size){ //?Here we are creating the queue
+ void createqueue(struct queue *q,int size){ //?Here we are creating the queue
    //? we are also initialising the queue parameters , here size parameter wil still remain even after changes 
    q->size=size;
    q->front=-1; 
