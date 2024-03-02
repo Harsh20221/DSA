@@ -7,7 +7,8 @@ struct Queue
  int front;
  int rear;
  int *Q;
-}; 
+};
+void create(struct Queue *q,int size)  
 {
  q->size=size; 
  q->front=q->rear=-1;
