@@ -36,12 +36,12 @@ else {
  }
 
  void create(struct queue *q,int size){ //?Here we are creating the queue
-   //? we are also initialising the queue parameters 
+   //? we are also initialising the queue parameters , here size parameter wil still remain even after changes 
    q->size=size;
    q->front=-1; 
    q->rear=-1;
    /////q->Q=new int [size];
-q->Q=(node**)malloc(q->size*sizeof(node*)); //TODO: Make sure to change the data  type of heap memory to node type 
+q->Q=(node**)malloc(q->size*sizeof(node*)); //TODO: Make sure to change the data  type of heap memory to node type using double pointers 
    
  }
 
