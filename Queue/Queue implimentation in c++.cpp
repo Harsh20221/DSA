@@ -6,7 +6,7 @@ int rear;
 int size;
 int *q;
 };
-void create(struct Queue *m , int size ){
+void create(struct Queue *m , int size ){ //? Here we are creating a queue of a size and initializing the front and rear pointers to -1. The `front` and `rear` pointers are used to keep track of the elements in the queue. The `size` variable is used to store the size of the queue. The `q` pointer is used to store the elements of the queue.
 m->rear=-1;
 m->front= -1;
 m->size=size;
