@@ -2,7 +2,7 @@
 #include <stdlib.h>
 #include <stdio.h>  
 using namespace std;
- struct node {  //* For eease of Understandig we can say that This node is like a doubly linked list with previous and next node 
+ struct node {  //* For ease of Understandig we can say that This node is like a doubly linked list with previous and next node 
    struct node *leftchild;   
    int data;  
    struct node *rightchild;
