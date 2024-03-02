@@ -12,7 +12,7 @@ using namespace std;
 
  int isfull(struct queue *q){
 if( q->rear==q->size-1){
-return -1;
+return -1;  //! Here we are returning -1 to indicate that the queue is full make sure to follow this convention only as using 0 or 1 will not work
 printf("The Queue is Full");}
 else {
 return 0;}
