@@ -1,6 +1,6 @@
-#include <iostream>
+#include <iostream>  //TODO: There are certain changes that we need to make t ensure our normal queue program is suited for Tree operations 
 #include <stdlib.h>
-#include <stdio.h>
+#include <stdio.h>  
 using namespace std;
  struct node {  //* For eease of Understandig we can say that This node is like a doubly linked list with previous and next node 
    struct node *leftchild;   
@@ -11,7 +11,7 @@ using namespace std;
  struct queue  {
     int front;
     int rear;
-    node **Q;  //! Make Sure to Change the type of the array where we store the queue to the new type node  , Use double pointer ** here
+    node **Q;  //TODO: Make Sure to Change the type of the array where we store the queue to the new type node  , Use double pointer ** here
     int size;
  };
 
@@ -41,11 +41,11 @@ else {
    q->front=-1; 
    q->rear=-1;
    /////q->Q=new int [size];
-q->Q=(node**)malloc(q->size*sizeof(node*)); //! Make sure to change the data  type of heap memory to node type 
+q->Q=(node**)malloc(q->size*sizeof(node*)); //TODO: Make sure to change the data  type of heap memory to node type 
    
  }
 
-void enqueue(struct queue *q, node *x) { //! Make sure to also change the enqueue data type to *node 
+void enqueue(struct queue *q, node *x) { //TODO: Make sure to also change the enqueue data type to *node 
    if (isfull(q)) {
       printf("Queue is Full Cannot Insert ");
    } else {
@@ -54,8 +54,8 @@ void enqueue(struct queue *q, node *x) { //! Make sure to also change the enqueu
    }
 }
 
-node* dequeue( struct queue *q ){ //! Make sure to change the fuction type to node *
-   node* x=NULL; //! Make sure to change the type of x to node *
+node* dequeue( struct queue *q ){ //TODO:Make sure to change the fuction type to node *
+   node* x=NULL; //TODO: Make sure to change the type of x to node *
    if (isempty(q)){
       printf("Queue is Empty No element to Dequeue");
    }
