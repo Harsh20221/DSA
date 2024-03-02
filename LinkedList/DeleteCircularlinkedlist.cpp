@@ -20,6 +20,7 @@ for ( int i=1 ; i <n ; i++){
 t=new node ;
 t->data = A[i]; //? here we are storing the data in the node
 t->next=last->next; //! Also here there is going to be a change where the next element of last will point towards t but in classical t->next will be Null 
+//? we are writing t->next=last->next to make sure our last element always point towards first element 
 last->next=t;
 last=t;
 

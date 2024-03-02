@@ -25,6 +25,8 @@ void create(struct Sparse* S) {
     for ( int i=0 ; i<S->num ; i++ ){  //! Here the limit of iterator will be i < S->num because num is the no of non zero elements
         cin>>S->e[i].i >>S->e[i].j >> S->e[i].x ;
     }
+
+    
 }
 
 void Display(struct Sparse *S){ 

@@ -4,7 +4,7 @@
 using namespace std;
 
 int s[100] = {};
-int size = 100; // Initialize size with a value
+int size = 100; 
 int top = -1;
 
 void push(int x) {

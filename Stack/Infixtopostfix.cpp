@@ -53,8 +53,32 @@ if (x=='+'||x=='-'||x=='*'||x=='/'){
 }
 
 int infixtopostflix(char* inflix) {
+    struct Stack S;
+    int i=0; int j=0;
     char* postflix;
-    int len = (postflix);
+    int len = strlen(postflix);
+    postflix=(char* ) malloc ( sizeof(inflix+1));
+
+    while (inflix[i]!='\0'){
+    
+    if (isoperand(inflix[i])){
+        postflix[j++]=inflix[i++];}
+        else 
+        {
+            if(precedence(inflix[i])>precedence( S.s[S.top]){
+                push(inflix[i++]);
+            }
+            else {
+                postflix[j++]=pop();
+            }
+        }
+
+
+        
+
+
+    }
+
 }
 
 
