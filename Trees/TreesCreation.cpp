@@ -69,8 +69,17 @@ return x;
 void display(struct queue *q){    
    for (int i=q->front+1;i<=q->rear;i++){  //?In this particular implementation of a queue in C++, the `front` and `rear` pointers are initialized to `-1` when the queue is empty. When an element is enqueued, the `rear` pointer is incremented and the element is inserted at the `rear` position. However, the `front` pointer remains at `-1` until an element is dequeued.
    ///?The `front+1` in the loop is used to start from the first element of the queue. If we just used `front`, we would be starting from `-1`, which is not a valid position in the array and would not correspond to any element in the queue.
-
-
       printf("%d",q->Q[i]);
+   
    }
 }
+
+ struct node *root=NULL;
+
+void TreeCreate(){
+struct node *p ;
+struct node *r;
+int x ;
+struct node q;
+root=(struct node*)malloc(size*sizeof(struct node));
+} 
