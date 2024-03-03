@@ -59,7 +59,7 @@ void enqueue(struct queue *q, node *x) { //TODO: Make sure to also change the en
 
 node* dequeue( struct queue *q ){ //TODO:Make sure to change the fuction type to node *
    node* x=NULL; //TODO: Make sure to change the type of x to node *
-   if (isempty(q)){
+   if (isempty(q)){    //? We have created the function type as node* because it is returning a node 
       printf("Queue is Empty No element to Dequeue");
    }
    else  

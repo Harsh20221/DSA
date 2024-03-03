@@ -1,3 +1,4 @@
+///! THIS FILE CONTAINS TREE CREATION CODE WITHOUT COMMENTS TO BE USED AS TEMPLATE 
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
