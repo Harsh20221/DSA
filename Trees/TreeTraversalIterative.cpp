@@ -21,7 +21,7 @@ int size;
 void CreateQueue(struct queue *q,int size){
 q->front=q->rear=-1;
 q->size=size;
-q->Q=(node**)malloc(size*sizeof(node));
+q->Q=(node**)malloc(size*sizeof(node*));
 }
 
 int isfull(struct queue *q){
@@ -61,10 +61,21 @@ node *x=NULL;
  return x;
 }
 
+struct node *root=NULL;
 
 void treecreate(){
-    if 
-}
+struct node *p;
+struct node *t;
+struct queue q ;
+CreateQueue(&q,100);
+int x=NULL;
+root=(node*)malloc(sizeof(node*));
+printf("Please enter Value of The Root Node ");
+scanf("%d",&x);
+root->data=x;
+enqueue(&q,root);
+while()
+
 
 
 
