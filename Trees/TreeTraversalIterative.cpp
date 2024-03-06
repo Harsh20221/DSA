@@ -151,14 +151,35 @@ void iterativepreorder(struct node* p) {
         else {
             p = popstack(&s);
             if (p != NULL) {  ///! Please make sure to write this here or else you'll get segmentation error as it'll access the right child of NULL    
+            ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors 
                 p = p->rightchild;
             }
         }
     }
 }
+
+void inorderiterative(struct node *p){
+    struct stack s;
+    createstack(&s,100);
+while(p!=NULL || !stackempty(&s)){
+    if(p!=NULL){
+         pushstack(&s,p);
+        p=p->leftchild;
+    }
+    else 
+    p=popstack(&s);
+   
+if(p!=NULL){
+       printf("%d",p->data); ///!The printf statement will be inside the not null loop 
+       ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors 
+        p=p->rightchild;}
+    
+}
+}
 int main() {
     treecreate();
-    iterativepreorder(root);
+   /// iterativepreorder(root);
+   inorderiterative(root);
     return 0;
 }
 
