@@ -151,7 +151,7 @@ void iterativepreorder(struct node* p) {
         else {
             p = popstack(&s);
             if (p != NULL) {  ///! Please make sure to write this here or else you'll get segmentation error as it'll access the right child of NULL    
-            ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors 
+            ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors basically we added an extra p!=NULL statement at line 153 to prevent segmentation error 
                 p = p->rightchild;
             }
         }
@@ -171,7 +171,7 @@ while(p!=NULL || !stackempty(&s)){
    
 if(p!=NULL){
        printf("%d",p->data); ///!The printf statement will be inside the not null loop 
-       ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors 
+       ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors basically we added an extra p!=NULL statement at line 172 to prevent segmentation error 
         p=p->rightchild;}
     
 }
