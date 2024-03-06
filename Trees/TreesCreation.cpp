@@ -96,7 +96,6 @@ while(!isempty(&q)){  ///? We are Checking here if the queue is empty or not  be
 p=dequeue(&q); //TODO: Please do not forget to insert the value of dequeue inside p 
 printf("Please Enter The value of Left Child %d:",p->data); //TODO: Here we are asking the user to enter the value of left child of the current node
 scanf("%d", &x);
-
 if(x !=-1){
 t=(struct node*)malloc(sizeof(struct node));
 t->data=x;

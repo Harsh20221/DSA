@@ -74,7 +74,31 @@ printf("Please enter Value of The Root Node ");
 scanf("%d",&x);
 root->data=x;
 enqueue(&q,root);
-while()
+while(!isempty){
+p=dequeue(&q);
+printf("Please Enter The data that you Wnat To enter In the Root Node ");
+scanf("%d",&x);
+root->data=x;
+p=dequeue(&q);
+    printf("Please Enter The data you want in the Left node of---%d",p->data,"");
+    scanf("%d",&x);
+if(x!=-1){
+    t=(node*)malloc(sizeof(node));
+    t->data=x;
+    t->leftchild=t->rightchild=NULL;
+    p->leftchild=t;
+    enqueue(&q,t);
+     printf("Please Enter Data to be pushed in the right node of ---",p->data);
+    scanf("%d",&x); 
+    if(x!=-1){
+     t=new(node);
+    t->data=x;
+    t->leftchild=t->rightchild=NULL;
+    p->rightchild=t;    
+    enqueue(&q,t);
+    }
+}}
+ 
 
 
 
