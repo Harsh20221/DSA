@@ -1,9 +1,5 @@
 //* If you  Have Doubts regarding creation of trees then check Tree Creation.cpp for comments at each step of creation 
 
-/* #include <iostream>
-#include<stdlib.h>
-#include<stdio.h>
-using namespace std; */
 #include <iostream>
 #include <stdlib.h>
 #include <stdio.h>
