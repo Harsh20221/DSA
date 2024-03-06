@@ -58,7 +58,7 @@ int pushstack(struct stack* s, node* x) {
     return 0;
 }
 
-node* popstack(struct stack* s) {
+node* popstack(struct stack* s) { //! This is the only function that returns a value so we need to return a value of type node*
     node* x = NULL;
     if (!stackempty(s)) {
         x = s->S[s->top];
