@@ -3,6 +3,7 @@
 #include <iostream>
 #include<stdlib.h>
 #include<stdio.h>
+using namespace std;
 struct node {
  struct node *leftchild;
  struct node *rightchild;
@@ -15,6 +16,56 @@ int rear;
 node **Q;
 int size;
 };
+
+struct stack{
+    int top;
+    node**S;
+    int size;
+};
+
+void createstack(struct stack *s,int size ){
+    s->top=-1;
+    s->size=size;
+    s->S=(node**)malloc(size*sizeof(node));
+}
+
+int isstackfull(struct stack *s){
+    if(s->top==s->size-1){
+        return -1;
+        cout<<"Stack is FULL CANNOT INSERT "<<endl;
+
+    }
+    else return 0;
+
+}
+
+int stackempty(struct stack *s){
+    if(s->top==-1){
+return -1;
+cout<<"Stack is Empty Cannot Remove "<<endl;
+    }
+    else return 0;
+
+}
+
+int pushstack(struct stack  *s,node* x){
+if(!isstackfull(s)){
+    s->top++;
+    s->S[s->top]=x;
+}
+else return -1;
+}
+
+int popstack(struct stack*s){
+    node *x=NULL;
+    if(!stackempty(s)){
+    x=s->S[s->top];
+    s->top--;
+    }
+    else return -1;
+}
+
+
 
 
 
@@ -97,10 +148,20 @@ if(x!=-1){
     p->rightchild=t;    
     enqueue(&q,t);
     }
-}}
+}}}
  
-
-
+void iterativepreorder(struct node  *p){
+    struct stack s;
+    createstack(&s,100);
+    while(p!=NULL|| !stackempty(&s)){
+        if(p!=NULL){
+        printf("%d",p->data);
+        pushstack(&s,p);
+    p=p->leftchild;}
+    else popstack(&s);
+    p->rightchild;
+    }
+}
 
 
 
