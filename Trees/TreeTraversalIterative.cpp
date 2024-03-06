@@ -170,7 +170,7 @@ while(p!=NULL || !stackempty(&s)){
     p=popstack(&s);
    
 if(p!=NULL){
-       printf("%d",p->data); ///!The printf statement will be inside the not null loop 
+       printf("%d",p->data); ///!The printf statement will be inside the not null loop after popping out from stack 
        ///* SPECIAL NOTE-- HERE THE else block of iterative display is different than what's in the udemy course as using that approach was creating errors basically we added an extra p!=NULL statement at line 172 to prevent segmentation error 
         p=p->rightchild;}
     
