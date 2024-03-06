@@ -20,7 +20,7 @@ struct queue {
 
 struct stack {
     int top;
-    node** S;
+    node** S;//Todo: Make sure to give the data type of stack also to be a pointer to a node
     int size;
 };
 
