@@ -145,6 +145,28 @@ int heighoftree(struct node *root){
   }
   else return y+1;
 }
+///? NOTES REGARDING THE HEIGHT OF TREE FUNCTIONS BELOW , HOW IT WORKS AND POSSIBLE DOUBTS 
+///* This C++ function, `heighoftree`, is used to calculate the height of a binary tree. The function takes a pointer to the root node of the binary tree as its argument The function uses a recursive approach to traverse the binary tree and calculate the height. The base case for the recursion is when the function is called with a null pointer, which represents an empty tree. In this case, the function returns 0, because the height of an empty tree is 0 If the function is called with a non-null pointer, it means that there is at least one node in the tree (the node that the pointer is pointing to). In this case, the function makes two recursive calls: one for the left child of the current node, and one for the right child. Each of these calls will return the height of the left and right subtrees, respectively The function then compares the heights of the left and right subtrees. If the height of the left subtree is greater than the height of the right subtree, the function returns the height of the left subtree plus 1. Otherwise, it returns the height of the right subtree plus 1. The "+1" is to account for the current node. 
+
+///*This function uses a depth-first traversal approach, visiting all nodes in the left subtree before visiting the nodes in the right subtree. The time complexity of the function is O(n), where n is the number of nodes in the tree, because it visits each node exactly once.
+
+///*The function `heighoftree` is designed to calculate the height of a binary tree. The height of a binary tree is the length of the longest path from the root to a leaf nodeIn the function, `x` and `y` are used to store the heights of the left and right subtrees, respectively. The function then checks if `x` is greater than `y`. If `x` is greater, it means the left subtree is taller, so it returns `x + 1` (the "+1" accounts for the current node). If `x` is not greater than `y`, it means the right subtree is taller or both subtrees have the same height, so it returns `y + 1`. So, even when `x` equals `y`, the function correctly returns `y + 1` as the height of the tree. This is why there's no explicit condition for `x = y`. The case where `x = y` is handled by the `else` clause, which returns `y + 1`.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 int main (){
