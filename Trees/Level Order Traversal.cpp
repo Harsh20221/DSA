@@ -37,8 +37,8 @@ int isfullqueue(struct queue *q){
 
 }
 
-int isemptyqueue(struct queue *q){
-    if ( q->front==q->rear){
+int isemptyqueue(struct queue q){
+    if ( q.front==q.rear){
        //// cout <<"Queue is Empty , Cannot comply"<<endl;
         return -1;
     }
@@ -71,7 +71,7 @@ cin>>x;
 root->data=x;
 root->lchild=root->rchild=NULL;
 enqueue(&q,root);
-while(!isemptyqueue(&q)){
+while(!isemptyqueue(q)){
 p=dequeue(&q);
 cout<<"Please Enter the Data That you want to enter in the left child of "<<":"<<p->data<<endl;
 cin>>x; //! Do not forget to write cin or else it'll display both left and right insert simoultanously 
@@ -105,8 +105,32 @@ preorder(p->rchild);
    }
 }
 
-int main (){
+/* int main (){
 createtree();
 preorder(root);
 return 0;
 }
+ */
+
+void levelordertraversal(struct node *root){
+    struct queue q ;
+    createqueue(&q,100);
+    printf("%d",root->data);
+    enqueue(&q,root);
+    while(!isemptyqueue(q)){
+        root=dequeue(&q); //TODO: Make sure to dequeue inside the root node not p or any other node 
+if(root->lchild!=NULL){
+    printf("%d",root->lchild->data);  //! Make sure to print like this root->lchild->data and not root->data or just root->lchild else the address will be printed and not data 
+    enqueue(&q,root->lchild);//TODO: Make sure to insert left child of root and noot root itself inside queue 
+}
+
+if(root->rchild!=NULL){
+    printf("%d",root->rchild->data);  //! Make sure to print like this root->rchild->data and not root->data or just root->rchild else something gibberish will be printed
+    enqueue(&q,root->rchild);
+}
+    }
+}
+
+int main (){
+    createtree();
+    levelordertraversal(root);}
