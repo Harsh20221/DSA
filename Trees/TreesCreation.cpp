@@ -135,10 +135,24 @@ return countnodes(root->leftchild)+countnodes(root->rightchild)+1;
 else return 0;
 }
 
+int heighoftree(struct node *root){
+   int x; int y; x=y=0;
+   if ( root==0){return 0;}
+  x=countnodes(root->leftchild);
+  y=countnodes(root->rightchild);
+  if(x>y){
+   return x+1;
+  }
+  else return y+1;
+}
+
+
 int main (){
 TreeCreate();
 preorder(root);
 cout<<endl;
  printf("Count:%d",countnodes(root)); ///!!!!! Very important to enclose this count nodes function inside print statement else nothing will get printed 
+ cout<<endl;
+ printf("Height of tree:%d",heighoftree(root));
 return 0;
 }
