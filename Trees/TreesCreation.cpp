@@ -125,8 +125,20 @@ preorder(p->rightchild);
    }
 }
 
+
+int countnodes(struct node *root){  ///TODO: In order to print the result make sure to enclose it inside print statement 
+
+   if (root!=NULL){
+
+return countnodes(root->leftchild)+countnodes(root->rightchild)+1;
+   }
+else return 0;
+}
+
 int main (){
 TreeCreate();
 preorder(root);
+cout<<endl;
+ printf("Count:%d",countnodes(root)); ///!!!!! Very important to enclose this count nodes function inside print statement else nothing will get printed 
 return 0;
 }

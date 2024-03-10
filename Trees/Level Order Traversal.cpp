@@ -131,6 +131,17 @@ if(root->rchild!=NULL){
     }
 }
 
+int countnodes(struct node *root){
+
+   if (root!=NULL){
+
+return countnodes(root->lchild)+countnodes(root->rchild)+1;}
+   else{
+    return 0;}
+}
+
 int main (){
     createtree();
-    levelordertraversal(root);}
+    levelordertraversal(root);
+    cout<<endl;
+    printf("Count:%d",countnodes(root));}
