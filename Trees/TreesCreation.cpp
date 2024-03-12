@@ -124,6 +124,22 @@ preorder(p->leftchild);
 preorder(p->rightchild);
    }
 }
+void inorder(struct node *p){
+   if (p!=NULL){
+      inorder(p->leftchild);
+      printf("%d",p->data);
+      inorder(p->rightchild);
+
+   }
+}
+
+void postorder(struct node *p){
+   if(p!=NULL){
+      postorder(p->leftchild);
+      postorder(p->rightchild);
+      printf("%d",p->data);
+   }
+}
 
 
 int countnodes(struct node *root){  ///TODO: In order to print the result make sure to enclose it inside print statement 
