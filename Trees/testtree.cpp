@@ -111,9 +111,55 @@ void preorder(struct node* p) {
       preorder(p->rightchild);
    }
 }
+void postorder(struct node *p){
+   if(p!=NULL){
+      postorder(p->leftchild);
+      postorder(p->rightchild);
+      printf("%d",p->data);
+   }
+}
+void inorder(struct node *p){
+   if (p!=NULL){
+      inorder(p->leftchild);
+      printf("%d",p->data);
+      inorder(p->rightchild);
+
+   }
+}
+int insert(struct node *t, int key ){
+struct node *p;
+struct node *r;
+while(t!=NULL){
+    r=t;
+    if (key==t->data){
+        return ;
+    }
+
+else if(key<t->data){
+        t=t->leftchild;
+    }
+    else if(key>t->data){
+        t=t->rightchild;
+        
+    }
+
+}
+p=new(node);
+p->data=key; 
+p->leftchild=p->rightchild=NULL;
+if(p->data<r->data){
+    r->leftchild=p;}
+    else 
+    r->rightchild=p;
+
+}
 
 int main() {
    TreeCreate();
-   preorder(root);
+   insert(root,20);
+
+   ///preorder(root);
+   inorder(root);
+   ////postorder(root);
    return 0;
 }
