@@ -5,7 +5,7 @@
 #include <stdlib.h>
 #include <stdio.h>  
 using namespace std;
- struct node {  //* For ease of Understandig we can say that This node is like a doubly linked list with previous and next node 
+ struct node {  //*** For ease of Understandig we can say that This node is like a doubly linked list with previous and next node
    struct node *leftchild;   
    int data;  
    struct node *rightchild;
@@ -74,7 +74,8 @@ return x;
    ///?The `front+1` in the loop is used to start from the first element of the queue. If we just used `front`, we would be starting from `-1`, which is not a valid position in the array and would not correspond to any element in the queue.
       printf("%d",q->Q[i]);
    
-   } //* This piece of code is not related to trees and was made originally to display the queue using array ,please ignore it 
+   }
+   //* This piece of code is not related to trees and was made originally to display the queue using array ,please ignore it
 } */
 
  struct node *root=NULL;
@@ -110,7 +111,7 @@ if ( x!=-1){  //TODO: Please don't be a moron and add a semicolon after the if c
 t->data=x;
 t->leftchild=t->rightchild=NULL; //Todo: Make sure to set the left and right child of t as null because the left child and right child is governed by p pointer which is takking the address of current node from queue by dequeue in line 104 hence either left or right child both will be assigned to p as p will always be the current node 
 p->rightchild=t;
-enqueue(&q,t); //?Here we'l, again insert the t pointer in queue as it's our reusable pointer 
+enqueue(&q,t); //?Here we'll, again insert the t pointer in queue as it's our reusable pointer
 } //! Both left and Right node assignment will be made inside same while loop 
 }
 
