@@ -2,7 +2,7 @@
 #include<stdlib.h>
 #include<stdio.h>
 using namespace std;
-///*VERY IMP NOTE REGARDING THIS CODE: This code is working in replit but not locally in this machine , The mystery remains unknown. till now. and no fixes have been found
+//*VERY IMP NOTE REGARDING THIS CODE: This code is working in replit  and CLion but not working in VS code  in this machine , The mystery remains unknown. till now. and no fixes have been found
 struct node {
     node*lchild;
     node*rchild;
@@ -47,3 +47,4 @@ int main(){
     return 0;
 }
 
+///*
