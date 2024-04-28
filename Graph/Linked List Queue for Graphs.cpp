@@ -3,7 +3,7 @@
 #include <stdio.h>
 using namespace std;
 
-struct node{
+struct node{    //#  This code's  empty condition is when front=NULL , Full condition when our node t=NULL because we know if there is no space left in heap then we cannot insert more 
 int data;
  node *next =NULL;
 }*front=NULL,*rear=NULL;
