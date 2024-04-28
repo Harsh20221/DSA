@@ -27,22 +27,22 @@ void enqueue(int x) {
 
 int dequque(){
     int x=-1;
-    node *t;
+    node *p;
     if(front==NULL){
     printf("Queue is Empty no element to process ");}
     else {
    x=front->data;
-   t=front;
+   p=front;
    front=front->next;
-   free(t);}
+   free(p);}
    return x;
 }
 
 void display(){
-    struct node *t=front;
-    while (t!=NULL){
-    printf("%d",t->data);
-    t=t->next;
+    struct node *g=front;
+    while (g!=NULL){
+    printf("%d",g->data);
+    g=g->next;
     }
 }
 
