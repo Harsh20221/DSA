@@ -14,7 +14,7 @@ int main(){
         A[j]=temp;
     }
 for (i=0; i<strlen(A); i++){ //? This is to print the array
-        cout<<A[i];
+        /* cout<<A[i]; */
     }
     return 0;
 }   
