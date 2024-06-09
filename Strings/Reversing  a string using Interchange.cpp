@@ -17,4 +17,4 @@ for (i=0; i<strlen(A); i++){ //? This is to print the array
         cout<<A[i];
     }
     return 0;
-}
+}   
