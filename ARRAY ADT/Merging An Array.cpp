@@ -19,10 +19,10 @@ struct Array *MerginganArray(struct Array *arr, struct Array *arr1, int n) { ///
         }
         else {
             arr3->A[k++] = arr1->A[j++];  //!! We are using k++ because we want to increment the index of the array arr3->A[k++] and not the index of the array arr1->A[j++]`
-        }
+        } 
     }
 
-    for (; i < arr->length; i++)   //!! The two for loops will be outside the while loop because we have to copy the remaining elements of the array which are not copied in the while loop
+    for (; i < arr->length;  i++)   //!! The two for loops will be outside the while loop because we have to copy the remaining elements of the array which are not copied in the while loop
         arr3->A[k++] = arr->A[i];
     for (; j < arr1->length; j++) 
         arr3->A[k++] = arr1->A[j];
